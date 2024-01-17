@@ -1,0 +1,25 @@
+import { LoginWindow, LoginSingleton } from "screens/login.slint";
+import { HomeWindow } from "screens/home.slint";
+
+export { LoginSingleton }
+
+// USed to define the global singleton
+export global AppSingleton {
+  in-out property<int> selectedScreen: 0;
+}
+
+export component AppWindow inherits Window {
+
+    width: 700px;
+    height: 500px;
+
+
+    login-page := LoginWindow {
+        visible: (AppSingleton.selectedScreen == 0);
+    }
+
+    home-page := HomeWindow {
+        visible: (AppSingleton.selectedScreen == 1);
+    }
+
+}

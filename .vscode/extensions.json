@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "vadimcn.vscode-lldb",
+    "Slint.slint",
+    "ms-vscode.cpptools",
+    "ms-vscode.cpptools-extension-pack"
+  ]
+}

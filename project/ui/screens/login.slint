@@ -1,0 +1,35 @@
+import { Button, VerticalBox , LineEdit} from "std-widgets.slint";
+
+export global LoginSingleton {
+    callback request-login(string, string);
+}
+
+export component LoginWindow inherits VerticalBox {
+
+    width: 200px;
+
+    VerticalBox {
+        padding: 10px;
+        Text {
+            text: "Login to the system";
+        }
+        username := LineEdit {
+            font-size: 14px;
+            input-type: InputType.text;
+            height: 30px;
+            placeholder-text: "Enter username here";
+        }
+        password := LineEdit {
+            font-size: 14px;
+            input-type: InputType.password;
+            height: 30px;
+            placeholder-text: "Enter password here";
+        }
+        Button {
+            text: "Login";
+            clicked => { 
+              LoginSingleton.request-login(username.text, password.text);
+            }
+        }
+     }
+}
