@@ -14,6 +14,8 @@ add_compile_definitions(
     SPDLOG_ACTIVE_LEVEL=$<IF:$<CONFIG:Debug>,SPDLOG_LEVEL_INFO,SPDLOG_LEVEL_WARN>
 )
 
+
+
 if (BUILD_PROJECT AND BUILD_SLINT)
     add_subdirectory(project)
 endif()
