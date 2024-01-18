@@ -7,6 +7,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR_IN_INTERFACE ON)
 option(BUILD_PROJECT "Build the application UI" ON)
 option(BUILD_SLINT "Build slint integration" ON)
 
+# This is where all the dependencies are defined
 include(cmake/dependencies.cmake)
 
 add_compile_definitions(

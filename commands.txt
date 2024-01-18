@@ -1,0 +1,4 @@
+conan install . --output-folder=build --build=missing --profile=debug   // Debug
+conan install . --output-folder=build --build=missing --profile=default // Release
+
+cmake --preset conan-default
