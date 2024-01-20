@@ -11,11 +11,11 @@ export global AppSingleton {
 export component AppWindow inherits Window {
 
     width: 700px;
-    height: 500px;
-
 
     login-page := LoginWindow {
         visible: (AppSingleton.selectedScreen == 0);
+        height: parent.height;
+        width: parent.width;
     }
 
     home-page := HomeWindow {

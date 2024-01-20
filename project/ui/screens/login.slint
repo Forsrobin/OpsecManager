@@ -4,32 +4,52 @@ export global LoginSingleton {
     callback request-login(string, string);
 }
 
-export component LoginWindow inherits VerticalBox {
+export component LoginWindow inherits Window {
 
-    width: 200px;
+    in property <image> logo: @image-url("../images/logo.png");
 
-    VerticalBox {
-        padding: 10px;
-        Text {
-            text: "Login to the system";
-        }
-        username := LineEdit {
-            font-size: 14px;
-            input-type: InputType.text;
-            height: 30px;
-            placeholder-text: "Enter username here";
-        }
-        password := LineEdit {
-            font-size: 14px;
-            input-type: InputType.password;
-            height: 30px;
-            placeholder-text: "Enter password here";
-        }
-        Button {
-            text: "Login";
-            clicked => { 
-              LoginSingleton.request-login(username.text, password.text);
+    HorizontalLayout {
+        alignment: center;
+
+        VerticalBox {
+            padding: 20px;
+            alignment: center;
+            height: parent.height;
+
+            Rectangle {
+                width: 125px;
+                height: 125px;
+                background: #fff;
+
+                Image {
+                    
+                    source: logo;
+                    width: parent.width;
+                    height: parent.height;
+                }
+            }
+            Text {
+                text: "Login to the system";
+            }
+            username := LineEdit {
+                font-size: 14px;
+                input-type: InputType.text;
+                height: 30px;
+                placeholder-text: "Enter username here";
+            }
+            password := LineEdit {
+                font-size: 14px;
+                input-type: InputType.password;
+                height: 30px;
+                placeholder-text: "Enter password here";
+            }
+            Button {
+                text: "Login";
+                clicked => { 
+                LoginSingleton.request-login(username.text, password.text);
+                }
             }
         }
-     }
+    }
+
 }
