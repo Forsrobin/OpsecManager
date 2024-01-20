@@ -6,7 +6,10 @@ add_subdirectory(src/application_engine)
 add_executable(${TARGET_NAME} src/main.cpp)
 
 target_link_libraries(${TARGET_NAME} PRIVATE ${PROJECT_NAME}_application_engine)
+
 target_link_libraries(${TARGET_NAME} PUBLIC openssl::openssl)
+target_link_libraries(${TARGET_NAME} PUBLIC libpqxx::pqxx)
+
 
 # On Windows, copy the Slint DLL next to the application binary so that it's found.
 

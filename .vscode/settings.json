@@ -76,7 +76,21 @@
     "xstring": "cpp",
     "xtr1common": "cpp",
     "xtree": "cpp",
-    "xutility": "cpp"
+    "xutility": "cpp",
+    "complex": "cpp",
+    "cwctype": "cpp",
+    "fstream": "cpp",
+    "numeric": "cpp",
+    "queue": "cpp",
+    "ranges": "cpp",
+    "*.tcc": "cpp",
+    "memory_resource": "cpp",
+    "string_view": "cpp",
+    "cinttypes": "cpp",
+    "codecvt": "cpp",
+    "filesystem": "cpp",
+    "source_location": "cpp",
+    "variant": "cpp"
   },
   "cmake.configureOnOpen": false
 }

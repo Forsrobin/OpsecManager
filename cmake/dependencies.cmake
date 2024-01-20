@@ -1,13 +1,12 @@
 include(FetchContent)
 
-option(BUILD_POSTGRESS "Build postgress" OFF)
-option(BUILD_OPENSSL "Build postgress" ON)
+option(BUILD_LIBPQXX "Build libpqxx" ON)
+option(BUILD_OPENSSL "Build OpenSSL" ON)
 
 include(cmake/dependencies/slint.cmake)
 
-if (BUILD_POSTGRESS)
-    include(cmake/dependencies/postgres.cmake)
-    target_link_libraries(${TARGET_NAME} PUBLIC libpqxx::pqxx)
+if (BUILD_LIBPQXX)
+    include(cmake/dependencies/libpqxx.cmake)
 endif()
 
 if (BUILD_OPENSSL)
