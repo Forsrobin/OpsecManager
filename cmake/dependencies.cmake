@@ -1,9 +1,10 @@
 include(FetchContent)
 
-option(BUILD_LIBPQXX "Build libpqxx" ON)
-option(BUILD_OPENSSL "Build OpenSSL" ON)
-
 include(cmake/dependencies/slint.cmake)
+
+if (BUILD_CURL)
+    include(cmake/dependencies/curl.cmake)
+endif()
 
 if (BUILD_LIBPQXX)
     include(cmake/dependencies/libpqxx.cmake)

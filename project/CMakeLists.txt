@@ -3,12 +3,23 @@ set(TARGET_NAME ${PROJECT_NAME})
 
 add_subdirectory(src/application_engine)
 
+add_library(opsec_includes STATIC)
+target_sources(opsec_includes
+    PUBLIC
+        FILE_SET CXX_MODULES FILES
+            src/network_manager.cpp
+)
+
 add_executable(${TARGET_NAME} src/main.cpp)
 
+target_link_libraries(${TARGET_NAME} PRIVATE opsec_includes)
 target_link_libraries(${TARGET_NAME} PRIVATE ${PROJECT_NAME}_application_engine)
 
+target_link_libraries(${TARGET_NAME} PUBLIC Slint::Slint)
 target_link_libraries(${TARGET_NAME} PUBLIC openssl::openssl)
 target_link_libraries(${TARGET_NAME} PUBLIC libpqxx::pqxx)
+target_link_libraries(${TARGET_NAME} PUBLIC CURL::libcurl)
+
 
 # On Windows, copy the Slint DLL next to the application binary so that it's found.
 
