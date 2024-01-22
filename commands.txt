@@ -2,3 +2,5 @@ conan install . --output-folder=build --build=missing --profile=debug   // Debug
 conan install . --output-folder=build --build=missing --profile=default // Release
 
 cmake --preset conan-defaultpyt
+
+C:\Users\[User]\AppData\Roaming\Code\User\globalStorage\llvm-vs-code-extensions.vscode-clangd\install\17.0.3\clangd_17.0.3\bin

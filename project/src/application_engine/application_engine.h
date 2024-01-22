@@ -1,7 +1,7 @@
 import NetworkManager;
+
 #include "app_window.h"
 #include "slint.h"
-
 
 class ApplicationEngine
 {
