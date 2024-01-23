@@ -16,5 +16,6 @@ public:
 
 private:
   NetworkManager networkManager;
+  std::string username;
   static void LoginLogic(const slint::ComponentHandle<AppWindow> &appWindow);
 };

@@ -3,6 +3,7 @@ module;
 
 export module NetworkManager;
 
+
 export class NetworkManager {
 public:
   NetworkManager();
