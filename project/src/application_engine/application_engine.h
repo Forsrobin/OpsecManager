@@ -14,6 +14,8 @@ public:
   ApplicationEngine &operator=(const ApplicationEngine &) = delete;
   static ApplicationEngine &init(const slint::ComponentHandle<AppWindow> &appWindow);
 
+  static std::string getUsername() { return "Hello"; }
+
 private:
   NetworkManager networkManager;
   std::string username;

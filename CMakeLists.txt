@@ -4,7 +4,6 @@ enable_testing()
 
 set(CMAKE_INCLUDE_CURRENT_DIR_IN_INTERFACE ON)
 set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Options to enable and disable
@@ -22,12 +21,13 @@ add_compile_definitions(
     SPDLOG_ACTIVE_LEVEL=$<IF:$<CONFIG:Debug>,SPDLOG_LEVEL_INFO,SPDLOG_LEVEL_WARN>
 )
 
+enable_testing()
+
 if (BUILD_PROJECT AND BUILD_SLINT)
     add_subdirectory(project)
 endif()
 
 if (BUILD_TESTS)
-    enable_testing()
     add_subdirectory(tests)
 endif()
 
