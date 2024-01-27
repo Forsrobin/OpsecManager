@@ -16,8 +16,6 @@ target_link_libraries(${TARGET_NAME} PRIVATE opsec_includes)
 target_link_libraries(${TARGET_NAME} PRIVATE ${PROJECT_NAME}_application_engine)
 
 target_link_libraries(${TARGET_NAME} PUBLIC Slint::Slint)
-target_link_libraries(${TARGET_NAME} PUBLIC openssl::openssl)
-target_link_libraries(${TARGET_NAME} PUBLIC libpqxx::pqxx)
 target_link_libraries(${TARGET_NAME} PUBLIC CURL::libcurl)
 
 

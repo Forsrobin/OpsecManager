@@ -1,6 +1,4 @@
 [requires]
-openssl/3.2.0
-libpqxx/7.8.1
 libcurl/8.5.0
 gtest/1.14.0
 

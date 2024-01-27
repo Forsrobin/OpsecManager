@@ -1,7 +1,5 @@
 #include "application_engine/application_engine.h"
 
-#include <openssl/ssl.h>
-
 int main(int argc, char **argv)
 {
 
