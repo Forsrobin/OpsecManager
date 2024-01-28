@@ -27,5 +27,6 @@ TEST(OpsecManagerTest, FunctioReturns) {
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
+  std::cout << "TESTING IN PROGRESS" << std::endl;
   return RUN_ALL_TESTS();
 }
