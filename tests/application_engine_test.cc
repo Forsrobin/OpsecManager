@@ -17,7 +17,9 @@ TEST(OpsecManagerTest, BasicAssertions) {
   EXPECT_LE(7 * 6, 43);
   // Expect greater than.
   EXPECT_GT(7 * 6, 10);
-
+  // RAndom comment
+  // Expect greater than or equal.
+  EXPECT_GE(7 * 6, 42);
 }
 
 TEST(OpsecManagerTest, FunctioReturns) {
